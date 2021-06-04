@@ -739,6 +739,19 @@
             propertyName: 'nama_lokal'}));
         document.getElementsByClassName('search-button')[1].className +=
          ' fa fa-binoculars';
+                L.Control.Watermark=L.Control.extend({
+            onAdd:function(map){
+                var img = L.DomUtil.create('img');
+                img.src = 'logo_all.png';
+                img.style.width = '300px';
+                return img;
+            },
+            onRemove:function(map){},
+        });
+        L.control.watermark = function(opts){
+            return new L.Control.Watermark(opts);
+        }
+        L.control.watermark({position: 'bottomright'}).addTo(map);
         </script>
     </body>
 </html>
