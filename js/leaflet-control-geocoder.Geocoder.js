@@ -11,7 +11,7 @@ module.exports = {
 			expand: 'touch', // options: touch, click, anythingelse
 			position: 'topright',
 			placeholder: 'Cari tempat...',
-			errorMessage: 'Tempat tidak ditemukan',
+			errorMessage: 'Tempat tidak ditemukan.',
 			suggestMinLength: 3,
 			suggestTimeout: 250,
 			defaultMarkGeocode: true
