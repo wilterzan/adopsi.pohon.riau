@@ -841,7 +841,7 @@
         L.control.layers(baseMaps,{'<img src="legend/PohonMuda_9.png" /> Pohon Muda': cluster_PohonMuda_9,'Pohon Dewasa<br /><table><tr><td style="text-align: center;"><img src="legend/PohonDewasa_8_1646cm285pohon0.png" /></td><td>16 - 46 cm [285 pohon]</td></tr><tr><td style="text-align: center;"><img src="legend/PohonDewasa_8_4660cm318pohon1.png" /></td><td>46 - 60 cm [318 pohon]</td></tr><tr><td style="text-align: center;"><img src="legend/PohonDewasa_8_6076cm266pohon2.png" /></td><td>60 - 76 cm [266 pohon]</td></tr><tr><td style="text-align: center;"><img src="legend/PohonDewasa_8_76314cm265pohon3.png" /></td><td>76 - 314 cm [265 pohon]</td></tr></table>': cluster_PohonDewasa_8,'<img src="legend/UsulanHutanDesaTandun_7.png" /> Usulan Hutan Desa Tandun': layer_UsulanHutanDesaTandun_7,'<img src="legend/HutanAdatTerusan_6.png" /> Hutan Adat Terusan': layer_HutanAdatTerusan_6,'<img src="legend/HutanAdatPetapahan_5.png" /> Hutan Adat Petapahan': layer_HutanAdatPetapahan_5,'<img src="legend/HutanAdatKampa_4.png" /> Hutan Adat Kampa': layer_HutanAdatKampa_4,'<img src="legend/HutanAdatGajahBertalut_3.png" /> Hutan Adat Gajah Bertalut': layer_HutanAdatGajahBertalut_3,"Peta Dasar (Google Satellite)": layer_PetaDasarGoogleSatellite_2,"Peta Dasar (Google Terrain)": layer_PetaDasarGoogleTerrain_1,"Peta Dasar (OSM Standard)": layer_PetaDasarOSMStandard_0,}).addTo(map);
         setBounds();
         map.addControl(new L.Control.Search({
-            layer: ([cluster_PohonMuda_9, cluster_PohonDewasa_8]),
+            layer: L.layerGroup([cluster_PohonMuda_9, cluster_PohonDewasa_8]),
             initial: false,
             hideMarkerOnCollapse: true,
             textPlaceholder: 'Cari berdasarkan kode pohon',
@@ -849,7 +849,7 @@
         document.getElementsByClassName('search-button')[0].className +=
          ' fa fa-binoculars';
         map.addControl(new L.Control.Search({
-            layer: ([cluster_PohonMuda_9, cluster_PohonDewasa_8]),
+            layer: L.layerGroup([cluster_PohonMuda_9, cluster_PohonDewasa_8]),
             initial: false,
             hideMarkerOnCollapse: true,
             textPlaceholder: 'Cari berdasarkan nama lokal',
